@@ -142,7 +142,7 @@ const FeaturedProjects = () => {
                     muted
                     playsInline
                     onClick={() => handleVideoClick(videoBeforeRef)}
-                    className="w-full h-full object-cover cursor-pointer"
+                    className="absolute inset-0 w-full h-full object-cover cursor-pointer"
                   />
                 </div>
               </div>
@@ -163,7 +163,7 @@ const FeaturedProjects = () => {
                     muted
                     playsInline
                     onClick={() => handleVideoClick(videoAfterRef)}
-                    className="w-full h-full object-cover cursor-pointer"
+                    className="absolute inset-0 w-full h-full object-cover cursor-pointer"
                   />
                   <div
                     onClick={() => handleVideoClick(videoAfterRef)}
