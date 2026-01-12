@@ -2,12 +2,6 @@ import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { GithubIcon, ExternalLinkIcon, PlayCircle } from "lucide-react";
-import beforeBDS from "../../public/1.1 Before-VideoBĐS.mp4";
-import afterBDS from "../../public/1.2 After-VideoBĐS.mp4";
-import beforeAtus from "../../public/2.1 Before-VideoSocial-ATUS.mp4";
-import afterAtus from "../../public/2.2 After-VideoSocial-ATUS.mp4";
-import beforeTThanh from "../../public/3.1 Before-VideoSocial-TranThanh.mp4";
-import afterTThanh from "../../public/3.2 After-VideoSocial-TranThanh.mp4";
 
 const fadeInVariant = {
   hidden: { opacity: 0, y: 30 },
@@ -29,24 +23,24 @@ const FeaturedProjects = () => {
       description:
         "A cinematic transformation of raw property footage using professional color grading, smooth motion transitions, and subtle ambient sound design — designed to elevate visual storytelling and attract potential buyers.",
       tech: ["Capcut", "Color Grading", "Cinematic Effects"],
-      videoBefore: beforeBDS,
-      videoAfter: afterBDS,
+      videoBefore: "/1.1 Before-VideoBĐS.mp4",
+      videoAfter: "/1.2 After-VideoBĐS.mp4",
     },
     {
       title: "Social Video Showcase",
       description:
         "Transforming raw social footage into a modern, engaging video through dynamic pacing, refined color grading, and smooth transitions — designed to highlight personality, emotion, and boost audience engagement across social platforms.",
       tech: ["Capcut", "Social Media Optimization", "Transitions"],
-      videoBefore: beforeAtus,
-      videoAfter: afterAtus,
+      videoBefore: "/2.1 Before-VideoSocial-ATUS.mp4",
+      videoAfter: "/2.2 After-VideoSocial-ATUS.mp4",
     },
     {
       title: "Voice-to-Video Short",
       description:
         "Voice-Driven Short Video Creating short-form videos built from voice-over first, then crafted with visuals, pacing, and transitions that follow the rhythm and emotion of the voice — designed to deliver clear storytelling and strong audience retention.",
       tech: ["Capcut", "Multi-camera Editing", "Smooth Transitions"],
-      videoBefore: beforeTThanh,
-      videoAfter: afterTThanh,
+      videoBefore: "/3.1 Before-VideoSocial-TranThanh.mp4",
+      videoAfter: "/3.2 After-VideoSocial-TranThanh.mp4",
     },
   ];
 
