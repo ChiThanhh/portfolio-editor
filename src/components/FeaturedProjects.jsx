@@ -41,7 +41,7 @@ const FeaturedProjects = () => {
       videoAfter: afterAtus,
     },
     {
-      title: "Trấn Thành",
+      title: "Voice-to-Video Short",
       description:
         "Voice-Driven Short Video Creating short-form videos built from voice-over first, then crafted with visuals, pacing, and transitions that follow the rhythm and emotion of the voice — designed to deliver clear storytelling and strong audience retention.",
       tech: ["Capcut", "Multi-camera Editing", "Smooth Transitions"],
@@ -135,6 +135,7 @@ const FeaturedProjects = () => {
                 </div>
                 <div className="relative rounded-lg overflow-hidden shadow-2xl border-2 border-gray-700">
                   <video
+                    ref={videoBeforeRef}
                     src={project.videoBefore}
                     autoPlay
                     loop
