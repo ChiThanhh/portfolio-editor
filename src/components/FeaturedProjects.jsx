@@ -2,12 +2,12 @@ import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { GithubIcon, ExternalLinkIcon, PlayCircle } from "lucide-react";
-import beforeBDS from "../assets/video/1.1 Before-VideoBĐS.mp4";
-import afterBDS from "../assets/video/1.2 After-VideoBĐS.mp4";
-import beforeAtus from "../assets/video/2.1 Before-VideoSocial-ATUS.mp4";
-import afterAtus from "../assets/video/2.2 After-VideoSocial-ATUS.mp4";
-import beforeTThanh from "../assets/video/3.1 Before-VideoSocial-TranThanh.mp4";
-import afterTThanh from "../assets/video/3.2 After-VideoSocial-TranThanh.mp4";
+import beforeBDS from "../../public/1.1 Before-VideoBĐS.mp4";
+import afterBDS from "../../public/1.2 After-VideoBĐS.mp4";
+import beforeAtus from "../../public/2.1 Before-VideoSocial-ATUS.mp4";
+import afterAtus from "../../public/2.2 After-VideoSocial-ATUS.mp4";
+import beforeTThanh from "../../public/3.1 Before-VideoSocial-TranThanh.mp4";
+import afterTThanh from "../../public/3.2 After-VideoSocial-TranThanh.mp4";
 
 const fadeInVariant = {
   hidden: { opacity: 0, y: 30 },
