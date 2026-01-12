@@ -133,7 +133,7 @@ const FeaturedProjects = () => {
                     BEFORE
                   </span>
                 </div>
-                <div className="relative rounded-lg overflow-hidden shadow-2xl border-2 border-gray-700">
+                <div className="relative rounded-lg overflow-hidden shadow-2xl border-2 border-gray-700 aspect-[9/16]">
                   <video
                     ref={videoBeforeRef}
                     src={project.videoBefore}
@@ -142,7 +142,7 @@ const FeaturedProjects = () => {
                     muted
                     playsInline
                     onClick={() => handleVideoClick(videoBeforeRef)}
-                    className="w-full h-full object-cover cursor-pointer "
+                    className="w-full h-full object-cover cursor-pointer"
                   />
                 </div>
               </div>
@@ -154,7 +154,7 @@ const FeaturedProjects = () => {
                     AFTER
                   </span>
                 </div>
-                <div className="relative rounded-lg overflow-hidden shadow-2xl border-2 border-white">
+                <div className="relative rounded-lg overflow-hidden shadow-2xl border-2 border-white aspect-[9/16]">
                   <video
                     ref={videoAfterRef}
                     src={project.videoAfter}
