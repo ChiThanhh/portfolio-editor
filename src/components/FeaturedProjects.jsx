@@ -124,7 +124,60 @@ const FeaturedProjects = () => {
             </div>
 
             {/* Before/After Comparison */}
-            <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            {/* Mobile View - Stacked */}
+            <div className="md:hidden relative max-w-md mx-auto h-[600px]">
+              {/* BEFORE - Bottom Left */}
+              <div className="absolute bottom-0 left-0 w-[45%] z-10">
+                <div className="absolute -top-3 left-2 z-20">
+                  <span className="bg-gray-800 text-white px-3 py-1.5 rounded font-bold text-xs tracking-wider">
+                    BEFORE
+                  </span>
+                </div>
+                <div className="relative rounded-lg overflow-hidden shadow-2xl border-2 border-gray-700">
+                  <video
+                    src={project.videoBefore}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    onClick={() => handleVideoClick(videoBeforeRef)}
+                    className="w-full h-full object-cover cursor-pointer "
+                  />
+                </div>
+              </div>
+
+              {/* AFTER - Top Right */}
+              <div className="absolute top-0 right-0 w-[70%] z-20">
+                <div className="absolute -top-3 left-4 z-30">
+                  <span className="bg-white text-gray-900 px-3 py-1.5 rounded font-bold text-xs tracking-wider">
+                    AFTER
+                  </span>
+                </div>
+                <div className="relative rounded-lg overflow-hidden shadow-2xl border-2 border-white">
+                  <video
+                    ref={videoAfterRef}
+                    src={project.videoAfter}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    onClick={() => handleVideoClick(videoAfterRef)}
+                    className="w-full h-full object-cover cursor-pointer"
+                  />
+                  <div
+                    onClick={() => handleVideoClick(videoAfterRef)}
+                    className="absolute inset-0 flex items-center justify-center"
+                  >
+                    <div className="bg-white/20 backdrop-blur-sm rounded-full p-4">
+                      <PlayCircle size={40} className="text-white" strokeWidth={2.5} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Desktop View - Side by Side */}
+            <div className="hidden md:grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
               {/* BEFORE */}
               <div className="relative group/video">
                 <div className="absolute -top-3 left-4 z-20">
