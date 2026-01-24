@@ -2,7 +2,12 @@ import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { GithubIcon, ExternalLinkIcon, PlayCircle } from "lucide-react";
-
+import video1  from "../assets/video/1.1-Before-VideoBDS.mp4";
+import video2  from "../assets/video/1.2-After-VideoBDS.mp4";
+import video3  from "../assets/video/2.1-Before-VideoSocial-ATUS.mp4";
+import video4  from "../assets/video/2.2-After-VideoSocial-ATUS.mp4";
+import video5  from "../assets/video/3.1-Before-VideoSocial-TranThanh.mp4";
+import video6  from "../assets/video/3.2-After-VideoSocial-TranThanh.mp4";
 const fadeInVariant = {
   hidden: { opacity: 0, y: 30 },
   visible: (i = 0) => ({
@@ -23,24 +28,24 @@ const FeaturedProjects = () => {
       description:
         "A cinematic transformation of raw property footage using professional color grading, smooth motion transitions, and subtle ambient sound design — designed to elevate visual storytelling and attract potential buyers.",
       tech: ["Capcut", "Color Grading", "Cinematic Effects"],
-      videoBefore: "/1.1 Before-VideoBĐS.mp4",
-      videoAfter: "/1.2 After-VideoBĐS.mp4",
+      videoBefore: video1,
+      videoAfter: video2,
     },
     {
       title: "Social Video Showcase",
       description:
         "Transforming raw social footage into a modern, engaging video through dynamic pacing, refined color grading, and smooth transitions — designed to highlight personality, emotion, and boost audience engagement across social platforms.",
       tech: ["Capcut", "Social Media Optimization", "Transitions"],
-      videoBefore: "/2.1 Before-VideoSocial-ATUS.mp4",
-      videoAfter: "/2.2 After-VideoSocial-ATUS.mp4",
+      videoBefore: video3,
+      videoAfter: video4,
     },
     {
       title: "Voice-to-Video Short",
       description:
         "Voice-Driven Short Video Creating short-form videos built from voice-over first, then crafted with visuals, pacing, and transitions that follow the rhythm and emotion of the voice — designed to deliver clear storytelling and strong audience retention.",
       tech: ["Capcut", "Multi-camera Editing", "Smooth Transitions"],
-      videoBefore: "/3.1 Before-VideoSocial-TranThanh.mp4",
-      videoAfter: "/3.2 After-VideoSocial-TranThanh.mp4",
+      videoBefore: video5,
+      videoAfter: video6,
     },
   ];
 
@@ -135,7 +140,9 @@ const FeaturedProjects = () => {
                     loop
                     muted
                     playsInline
+                    preload="auto"
                     onClick={() => handleVideoClick(videoBeforeRef)}
+                    onError={(e) => console.error('Video load error:', e, project.videoBefore)}
                     className="absolute inset-0 w-full h-full object-cover cursor-pointer"
                   />
                 </div>
@@ -156,7 +163,9 @@ const FeaturedProjects = () => {
                     loop
                     muted
                     playsInline
+                    preload="auto"
                     onClick={() => handleVideoClick(videoAfterRef)}
+                    onError={(e) => console.error('Video load error:', e, project.videoAfter)}
                     className="absolute inset-0 w-full h-full object-cover cursor-pointer"
                   />
                   <div
@@ -188,7 +197,9 @@ const FeaturedProjects = () => {
                     loop
                     muted
                     playsInline
+                    preload="auto"
                     onClick={() => handleVideoClick(videoBeforeRef)}
+                    onError={(e) => console.error('Video load error:', e, project.videoBefore)}
                     className="w-full h-full object-cover cursor-pointer transition duration-300 grayscale-[30%]"
                   />
                   <div
@@ -215,7 +226,9 @@ const FeaturedProjects = () => {
                     loop
                     muted
                     playsInline
+                    preload="auto"
                     onClick={() => handleVideoClick(videoAfterRef)}
+                    onError={(e) => console.error('Video load error:', e, project.videoAfter)}
                     className="w-full h-full object-cover cursor-pointer transition duration-300"
                   />
                   <div
